@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <style>
+        .outer {display:inline-block;border: 0px solid #808080;margin: 5px;padding: 5px;text-align:center;}
+        .outer .row {display: block;margin-top:-5px;}
+        .outer .row span {display: inline-block;width: 20px;height: 20px;border: 1px solid #808080;margin: 0;padding: 0;margin-left:-1px;}
+        
+        
+        .outer .home-green{background-color:green; border:1px solid green!important;}
+        .outer .home-blue{background-color:blue;border:1px solid blue!important;}
+        .outer .home-yellow{background-color:yellow;border:1px solid yellow!important;}
+        .outer .home-red{background-color:red;border:1px solid red!important;}
+        .home-green.white-plate, .home-yellow.white-plate, .home-red.white-plate,.home-blue.white-plate{background-color:white; border:1px solid white!important;}
+
+        .white-plate.green {background-image: radial-gradient(green, #0db70d, green);}
+        .white-plate.yellow{background-image: radial-gradient(yellow, #e6e663, yellow);}
+        .white-plate.red {background-image: radial-gradient(red, #f33c3c82, red);}
+        .white-plate.blue  {background-image: radial-gradient(blue, #8188e2, blue);}
+
+        .outer .enterance-green{background-color:red;}
+        .outer .enterance-yellow{background-color:yellow;}
+        .outer .enterance-red{background-color:red;}
+        .outer .enterance-blue{background-color:blue;}
+        
+        .row span[data-entrance="green"] {background-image: radial-gradient(green, #0db70d, green);}
+        .row span[data-entrance="yellow"]{background-image: radial-gradient(yellow, #e6e663, yellow);}
+        .row span[data-entrance="red"] {background-image: radial-gradient(red, #f33c3c82, red);}
+        .row span[data-entrance="blue"]  {background-image: radial-gradient(blue, #8188e2, blue);}
+
+        .row span[data-stamp="green"] {background-image: radial-gradient(green, #0db70d, green);}
+        .row span[data-stamp="yellow"] {background-image: radial-gradient(yellow, #e6e663, yellow);}
+        .row span[data-stamp="red"] {background-image: radial-gradient(red, #f33c3c82, red);}
+        .row span[data-stamp="blue"] {background-image: radial-gradient(blue, #8188e2, blue);}
+
+        .row span[data-outer-stamp="stamp-common"] {background:url(star.png) -2px -2px no-repeat}
+
+
+        .arrow-green{width: 0;
+                    height: 0;
+                    border-top: 32px solid transparent;
+                    border-left: 30px solid green;
+                    border-bottom: 32px solid transparent;
+                    display: inline-block;
+                    position: absolute;
+                    margin-left: -32px;
+                    margin-top: -193px;
+        }
+
+        .arrow-yellow{width: 0;
+                    height: 0;
+                    border-left: 32px solid transparent;
+                border-right: 30px solid transparent;
+                border-top: 32px solid yellow;
+                    display: inline-block;
+                    position: absolute;
+                    margin-left: -33px;
+                    margin-top: -193px;
+        }
+
+         .arrow-blue{width: 0;
+                    height: 0;
+                    border-top: 32px solid transparent;
+                    border-right: 30px solid blue;
+      border-bottom: 32px solid transparent;
+                    display: inline-block;
+                    position: absolute;
+                    margin-left: 0px;
+                    margin-top: -193px;
+        }
+
+         .arrow-red{width: 0;
+      height: 0;
+      border-left: 32px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 32px solid red;
+                    display: inline-block;
+                    position: absolute;
+                    margin-left: -33px;
+                    margin-top: -162px;
+        }
+
+    </style>
+    <script src="ludo.master.js"></script>
+</head>
+<body>
+    <h1>Welcome To Lodu </h1>
+
+    
+    <div id="platform"></div>
+
+
+</body>
+</html>
