@@ -38,6 +38,7 @@ function drawGame()
     drawPlayerHome();
     addArrows();
     homeWhitePlate();
+    
 }
 
 function drawPlayerHome()
@@ -85,7 +86,8 @@ function highightEntranceBlock(element, rowindex, colIndex) {
     }
 
     higlighHomeStamp(element, rowindex, colIndex);
-    highlightOuterStamp(element, rowindex, colIndex);    
+    highlightOuterStamp(element, rowindex, colIndex);
+    drawEntranceArrow(element, rowindex, colIndex);
 
 }
 
@@ -111,6 +113,7 @@ function highlightOuterStamp(element, rowindex, colIndex) {
 }
 
 
+//Add Arrows to construct Home
 function addArrows()
 {
     var arrows = ['arrow-green', 'arrow-yellow', 'arrow-red', 'arrow-blue'];
@@ -128,12 +131,6 @@ function addArrows()
 
 function homeWhitePlate()
 {
-    //Leave thes
-    //zero row all columns
-    //zero column all rows
-    //fifth row all columns
-    // all row fift columns
-
     var color = ['green', 'yellow', 'red', 'blue']
     for (var index = 0; index < color.length; index++) {
         var $elements = document.getElementsByClassName('home-' + color[index]);
@@ -162,4 +159,22 @@ function markHomeDicePlace() {
         $whiteBlocks[15].classList.add(color[index]);
         
     }
+}
+
+
+function drawEntranceArrow(element,rowindex,colIndex)
+{
+    var forYellow = (rowindex === 0 && colIndex === 7);
+    var forBlue = (rowindex === 7 && colIndex === 14);
+    var forGreen = (rowindex === 7 && colIndex === 0);
+    var forRed = (rowindex === 14 && colIndex === 7);
+
+    if (forGreen || forYellow || forRed || forBlue) {
+
+        var color_class = (((forGreen)? 'green' : (forYellow) ? 'yellow' : (forBlue) ? 'blue' : 'red'))
+        var iTag = document.createElement('i');
+        iTag.setAttribute('class', 'entrance-arrow '+ color_class);
+        element.appendChild(iTag);
+    }
+
 }
